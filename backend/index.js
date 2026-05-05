@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
 const corsOptions = {
-    origin:'http://localhost:5173',
+    origin:'job-connect-pc7m4a8cs-aashish-choudharys-projects-4d2bacec.vercel.app',
     credentials:true
 }
 
