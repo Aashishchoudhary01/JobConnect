@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 6%; /* Extremely dark slate/black */
+    --foreground: 0 0% 98%;
+    
+    --card: 240 10% 8%; /* Slightly lighter than background */
+    --card-foreground: 0 0% 98%;
+    
+    --popover: 240 10% 8%;
+    --popover-foreground: 0 0% 98%;
+    
+    --primary: 265 89% 58%; /* The exact vivid purple */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 240 6% 12%; /* Dark gray for pills and inputs */
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 240 6% 12%;
+    --muted-foreground: 240 5% 65%;
+    
+    --accent: 240 6% 15%;
+    --accent-foreground: 0 0% 98%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 240 5% 16%;
+    --input: 240 5% 16%;
+    --ring: 265 89% 58%;
+    
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased min-h-screen;
+  }
+}
+
+/* Exact Grid Pattern from the Image */
+.bg-grid {
+  background-size: 60px 60px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Purple radial glow behind the hero */
+.hero-glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1000px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
